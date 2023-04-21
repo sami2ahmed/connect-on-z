@@ -2,6 +2,7 @@
 IBM mq connector running on ziip AS400 mainframe to emit to kafka 
 
 ## To post connector to distributed connect worker 
+```
 curl -i -X PUT -H  "Content-Type:application/json" \
     http://<HOST>:8083/connectors/test-mq-source-connector/config \
     -d '{
@@ -24,3 +25,4 @@ curl -i -X PUT -H  "Content-Type:application/json" \
         "max.pending.messages": "5000",
         "max.poll.duration": "5000"
     }'
+    ```
